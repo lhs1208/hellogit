@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>Scar</title>
+
+<!-- 모바일 웹 페이지 설정 -->
+<link rel="shortcut icon" href="assets/ico/favicon.png" />
+<link rel="apple-touch-icon-precomposed"
+	href="assets/ico/apple-touch-icon-144-precomposed.png" />
+
+<!-- bootstrap -->
+<link rel="stylesheet" type="text/css"
+	href="assets/css/bootstrap.min.css" />
+
+<!-- 나눔고딕 웹 폰트 적용 -->
+<link rel="stylesheet" type="text/css" href="assets/css/nanumfont.css" />
+
+<!-- 반응형 웹을 지원하지 않을 경우 -->
+<!-- <link rel="stylesheet" href="assets/css/non-responsive.css" /> -->
+
+<!-- IE8 이하 버전 지원 -->
+<!--[if lt IE 9]>
+		<script type="text/javascript" src="assets/js/html5shiv.js"></script>
+		<script type="text/javascript" src="assets/js/respond.min.js"></script>
+		<![endif]-->
+
+<!-- IE10 반응형 웹 버그 보완 -->
+<!--[if gt IE 9]>
+		<link rel="stylesheet" type="text/css" href="assets/css/ie10.css" />
+		<script type="text/javascript" src="assets/js/ie10.js"></script>
+		<![endif]-->
+
+<!-- Javascript -->
+<script src="assets/js/jquery-1.10.2.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>	
+
+
+<!-- 우리들의 css -->
+<link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+<script type="text/javascript">
+	$(function function_name(argument) {
+		$("#pull").click(function() {
+			$("nav ul").toggle(300);
+		})
+	})
+</script>
+
+<script type="text/javascript">
+jQuery(function($){
+    var $preview_zone = $('.nolink');
+    var msg = '로그인을 해주세요!';
+    $preview_zone
+      .find('a, [onclick]').on('click', function(){
+        alert(msg);
+        return false;
+      })
+      .prop('onclick', null);
+    ;
+});
+
+</script>
+
+</head>
+
+<body>
+
+	<header>
+		<!-- 로고 -->
+		<div id="a1">
+			<a id="logo" href="main.html"><img src="img/1.png" width="100" height="50"></a>
+		</div>
+		<!--// 로고 -->
+		
+		<div>
+		<!-- 메뉴바 -->
+		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<!-- 배경을 제외한 메뉴 항목의 영역 제한 -->
+			<div class="container">
+				<!-- 로고 영역 -->
+				<div class="navbar-header">
+					<!-- 반응형 메뉴 버튼 -->
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!--// 반응형 메뉴 버튼 -->
+				
+				</div>
+				<!--// 로고 영역 -->
+				<!-- 메뉴 영역 -->
+				<div class="dropdown">
+				<div class="navbar-collapse collapse">
+					<!-- 메인메뉴 -->
+					<ul class="nav navbar-nav">
+						<li class="active">
+							<a href="main.html">Home</a>
+							
+						</li>
+						<li>
+							<a href="sub1.html">서비스안내</a>
+							<div class="dropdown-content">
+                                <a href="sub1.html">서비스 안내</a>
+                                <a href="sub2.html">이용 규칙</a>
+                                <a href="sub3.html">차량 정보</a>
+                        	</div>
+						</li>
+						<li>
+							<a href="center1.html">고객센터</a>
+							<div class="dropdown-content">
+                                <a href="center1.html">공지사항</a>
+                                <a href="center2.html">자주묻는 질문</a>
+                                <a href="center3.html">1:1 문의</a>
+                        	</div>
+						</li>
+						<li>
+							<a href="rec1.html">추천지</a>
+							<div class="dropdown-content">
+                                <a href="rec1.html">추천지</a>
+                                <a href="rec2.html">이용후기</a>	
+                            </div>
+						</li>
+						<li>
+							<a href="book.html">예약/찾기</a>
+							<div class="dropdown-content">
+                                <a href="book.html">예약</a>
+                                <a href="book.html">찾기</a>
+                                
+                        	</div>
+						</li>
+						
+						<li class="nolink">
+						
+							<a href="javascript:location.href='mypage.html'" target="_blank">MyPage</a>	
+										
+						</li>
+						
+					</ul>
+					<!--// 메인메뉴 -->
+					
+				</div>
+				<!--// 메뉴 영역 -->
+
+			</div>
+			<!--// 배경을 제외한 메뉴 항목의 영역 제한 -->
+		</div>
+		<!--// 메뉴바 -->
+
+
+	</header>
+	<!-- 헤더영역 끝 -->
+
+<!-- 내용영역 -->
+	<div class="main" id="c">
+	<div class="container" id="b">
+				<div class="col-sm-2" id="sidebar" role="navigation">
+					<div class="list-group">
+						<a href="join.html" class="list-group-item"><strong>회원가입</strong></a>
+						<a href="join3.html" class="list-group-item"><strong>ID/PW 찾기</strong></a>
+					
+												
+					</div>
+				</div>
+				<!--탭 bar 끝-->
+
+				<div id="joinbox" class="col-sm-10">
+
+		
+
+					<div class="row">
+
+						<div class="jumbotron">
+				            <div class="font5"><h1>어서오세요~ <span>SSCar</span> 입니다.</h1></div>
+				            <br>
+				            <h3>언제나 어디서나 즐거운 드라이빙을 즐기시려면</h3>
+				            <h3>지금 바로 가입하세요~!</h3>
+			            </div>
+			            <!-- //점보트론 -->
+			        
+
+			            <!-- 회원가입 -->
+			            <div style="border-right: 1px solid #48BAE4; height: auto; padding:10px;" class="col-md-6">
+				        <h2>개인회원</h2>
+				            <p>간편하게 가입하고 편리하게 사용하세요.
+				            <br> 회원가입으로 다양한 차량들을 몰아보세요.</p>
+				            <a href="join1_1.html"><img src="img/joinbutton.jpg"></a>
+                        </div>
+			            <div class="col-md-6">
+				            <h2>법인회원</h2>
+				            <p>기업 가입시 다양한 혜택이 쾅쾅
+				            <br>저희는 여러분의 회사와 같이 달려갑니다.</p>
+				            <p><strong>현재 법인회원은 준비중입니다. 빠른시일내에 만나요!</strong></p>
+				            
+			            </div>
+					</div>
+					<br>
+					<br>
+					<br>
+					<div id="joinbox_bottom">
+						<h2>회원가입은 만 14세 이상만 가입이 가능합니다.</h2>
+						<p><br>타인의 정보를 도용해 가입하거나 허위정보로 가입해 차량을 이용할 경우 법적 처벌의 대상이 될 수 있습니다.</p>
+					</div>
+					<!-- table row 끝-->
+				</div>
+				<!--게시판 bar 끝-->
+
+	</div>
+	<!-- contain 끝-->
+	</div>
+	<!--main 끝-->
+
+
+		<hr>
+
+
+
+<!-- 푸터 -->
+	
+
+		<footer id="footer">
+			<div class="container">
+				<p>
+				<div>
+					&copy; 2016 <a class="link color-3" href="#">Privacy Policy</a>
+				</div>
+				<div>
+					이모든 저작권은<a rel="nofollow" target="_blank" href="#"> <주>Scar
+						corp.에 있습니다.</a> <a rel="nofollow" target="_blank" href="#">www.scar.com</a>
+				</div>
+
+				</p>
+			</div>
+		</footer>
+		<!--// 푸터 -->
+
+	<div class="floating">
+		<div><a href="http://www.kweather.co.kr/main/main.html"><img src="img/날씨.png"></a></div>
+		<div><a href="join.html"> <img src="img/a.png"></a></div>		
+		<div><a href="rec1.html"> <img src="img/추천.png"></a></div>
+		<div><a href="book.html"> <img src="img/예약.png"></a></div>	
+	</div>				
+
+</body>
+</html>
