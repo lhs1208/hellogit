@@ -67,7 +67,6 @@ jQuery(function($){
       .prop('onclick', null);
     ;
 });
-
 </script>
 
 </head>
@@ -81,7 +80,7 @@ jQuery(function($){
 		</div>
 		<!--// 로고 -->
 		
-		<div>
+
 		<!-- 메뉴바 -->
 		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 			<!-- 배경을 제외한 메뉴 항목의 영역 제한 -->
@@ -95,10 +94,10 @@ jQuery(function($){
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<!--// 반응형 메뉴 버튼 -->
-				
+					<!--// 반응형 메뉴 버튼 -->				
 				</div>
 				<!--// 로고 영역 -->
+
 				<!-- 메뉴 영역 -->
 				<div class="dropdown">
 				<div class="navbar-collapse collapse">
@@ -140,10 +139,8 @@ jQuery(function($){
                         	</div>
 						</li>
 						
-						<li class="nolink">
-						
-							<a href="javascript:location.href='mypage.html'" target="_blank">MyPage</a>	
-										
+						<li class="nolink">						
+							<a href="javascript:location.href='mypage.html'" target="_blank">MyPage</a>											
 						</li>
 						
 					</ul>
@@ -156,111 +153,76 @@ jQuery(function($){
 			<!--// 배경을 제외한 메뉴 항목의 영역 제한 -->
 		</div>
 		<!--// 메뉴바 -->
-
-
 	</header>
 	<!-- 헤더영역 끝 -->
 
-<!-- 내용영역 -->
+
+	<!-- 내용영역 -->
 	<div class="main" id="c">
 	<div class="container" id="b">
 				<div class="col-sm-2" id="sidebar" role="navigation">
 					<div class="list-group">
-						<a href="join.html" class="list-group-item"><strong>회원가입</strong></a>
-						<a href="join3.html" class="list-group-item"><strong>ID/PW 찾기</strong></a>
-					
-												
+						<a href="mypage1.html" class="list-group-item"><strong>내정보</strong></a>
+						<a href="mypage2.html" class="list-group-item"><strong>예약내역</strong></a>
+						<a href="mypage3.html" class="list-group-item"><strong>결제내역</strong></a>
 					</div>
 				</div>
 				<!--탭 bar 끝-->
 
-				<div id="joinbox" class="col-sm-10">
+			<div class="container">
 
-		
+			<h1>내 정보</h1>
+			<br><br>
+			<!-- 데스크탑: 한 줄에 4개, 태블릿: 한 줄에 2개 씩 배치되도록 그리드 구성 -->
+			<div class="row col-sm-10">
+								<table class="table table-bordered">
+			<tbody>
+				<tr>
+					<th class="info text-center" width="130">아이디</th>
+					<td><%=item.getStudno()%></td>
+				</tr>
+				<tr>
+					<th class="info text-center">비밀번호</th>
+					<td><%=item.getName()%></td>
+				</tr>
+				<tr>
+					<th class="info text-center">이름</th>
+					<td><%=item.getUserid()%></td>
+				</tr>
+				<tr>
+					<th class="info text-center">생년월일</th>
+					<td><%=item.getGrade()%></td>
+				</tr>
+				<tr>
+					<th class="info text-center">이메일</th>
+					<td><%=item.getIdnum()%></td>
+				</tr>
+				<tr>
 
-					<div class="row">
+					<th class="info text-center">주소</th>
+					<td>우편번호<%=item.getTel()%> |||||||||||| <%=item.getBirthdate()%></td>
+				</tr>
+			</tbody>
+		</table>
+			<br>
+			<a href="mypage_edit.html" class="btn btn-primary pull-right">수정하기</a>
 
-						<div class="jumbotron col-md-12">
-				        	<div class="col-md-6">
-					        	<h2>아이디 찾기</h2>
-					            <p>간단하게 아이디를 찾아보아요.
-					            </p>
-					            <button class="btn btn-default" data-target="#layerpop" data-toggle="modal">아이디 찾기</button><br/>
-									<div class="modal fade" id="layerpop" >
-									  <div class="modal-dialog">
-									    <div class="modal-content">
-									      <!-- header -->
-									      <div class="modal-header">
-									        <!-- 닫기(x) 버튼 -->
-									        <button type="button" class="close" data-dismiss="modal">×</button>
-									        <!-- header title -->
-									        <h4 class="modal-title">아이디 찾기</h4>
-									      </div>
-									      <!-- body -->
-									      <div class="modal-body">
-									     	 <form role="form">
-									      		<label for="name">이름</label>
-												<input type="text" id="name" class="form-control" placeholder="이름을 입력하세요."/>			<label for="email">이메일</label>
-												<input type="email" id="email" class="form-control" placeholder="이메일을 입력하세요."/>	
-									     		
-												<button type="button" class="btn pull-right">입력완료</button>
-									     	</form>
-									      </div>
-									      <!-- Footer -->
-									      <div class="modal-footer">
+			<script type="text/javascript">
+				function button_event(){
+					if (confirm("정말 탈퇴하시겠습니까ㅠ_ㅠ??") == true){    //확인
+					    location.replace("main.html");         
+					}else{   //취소
+					    return;
+					}
+					}
+			</script>
+			<input class="btn btn-danger pull-right" type="button" value="탈퇴하기" onclick="button_event();">
+			</div>
+			<!--row 끝 -->
 
-									        <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
-									      </div>
-									    </div>
-									  </div>
-									</div>
-	                        </div>
-				            <div class="col-md-6">
-					            <h2>비밀번호 찾기</h2>
-					            <p>간단하게 비밀번호를 찾아보아요.
-					            </p>
-					           
-					            <button class="btn btn-default" data-target="#layerpop2" data-toggle="modal">비밀번호 찾기</button><br/>
-									<div class="modal fade" id="layerpop2" >
-									  <div class="modal-dialog">
-									    <div class="modal-content">
-									      <!-- header -->
-									      <div class="modal-header">
-									        <!-- 닫기(x) 버튼 -->
-									        <button type="button" class="close" data-dismiss="modal">×</button>
-									        <!-- header title -->
-									        <h4 class="modal-title">비밀번호 찾기</h4>
-									      </div>
-									      <!-- body -->
-									      <div class="modal-body">
-									     	 <form role="form">
-									      		<label for="name">이름</label>
-												<input type="text" id="name" class="form-control" placeholder="이름을 입력하세요."/>			<label for="email">이메일</label>
-												<input type="email" id="email" class="form-control" placeholder="이메일을 입력하세요."/>	
-									     		
-												<button type="button" class="btn pull-right">입력완료</button>
-									     	</form>
-									      </div>
-									      <!-- Footer -->
-									      <div class="modal-footer">
-
-									        <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
-									      </div>
-									    </div>
-									  </div>
-									</div> 	            
-			            </div>
-			            </div>
-					</div>
-					<br>
-					<br>
-					<br>
-
-				</div>
-				<!--게시판 bar 끝-->
-
-	</div>
-	<!-- contain 끝-->
+			</div>
+			<!-- contain 끝-->
+		</div>
 	</div>
 	<!--main 끝-->
 
@@ -288,12 +250,13 @@ jQuery(function($){
 		</footer>
 		<!--// 푸터 -->
 
+
 	<div class="floating">
 		<div><a href="http://www.kweather.co.kr/main/main.html"><img src="img/날씨.png"></a></div>
 		<div><a href="join.html"> <img src="img/a.png"></a></div>		
 		<div><a href="rec1.html"> <img src="img/추천.png"></a></div>
 		<div><a href="book.html"> <img src="img/예약.png"></a></div>	
-	</div>				
-
+	</div>			
 </body>
+
 </html>
